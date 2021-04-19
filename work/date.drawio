@@ -1,0 +1,22 @@
+<mxfile>
+    <diagram id="1j2mloLMgPMnuTVOyplt" name="ページ1">
+        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="User&lt;br&gt;ID:String&lt;br&gt;Name:String&lt;br&gt;Mail:String&lt;br&gt;PassWord:password&lt;br&gt;Sex:int&lt;br&gt;Age:int&lt;br&gt;Birthday:date&lt;br&gt;favStoreID:string(Store.ID)" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="41" y="40" width="169" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Store&lt;br&gt;ID:string&lt;br&gt;Name:string&lt;br&gt;Address:string&lt;br&gt;PhoneNum:int&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="240" width="120" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Review&lt;br&gt;Title:string&lt;br&gt;Body:string&lt;br&gt;StoreID:string(Store.ID)" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="390" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="StoreScore&lt;br&gt;StoreID:string(Store.ID)&lt;br&gt;AloneScore:float&lt;br&gt;TalkScore:float&lt;br&gt;TasteScore:float&lt;br&gt;Price:int&lt;br&gt;UserID:string(User.ID)" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="230" width="140" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
