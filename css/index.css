@@ -10,9 +10,8 @@ html {
 }
 .siteHeader{
     position: relative;
-    background:linear-gradient(rgb(57, 162, 194)rgb(76,208,248));
+    background-color:rgb(57, 162, 194);
 }
-
 .siteHeaderWrapper{
     padding: 1rem 1rem;
 }
@@ -20,12 +19,23 @@ html {
 .welcome{
     font-weight: bold;
     font-size: 30px;
-    color: aliceblue;
+    color: rgb(0, 45, 75);
     font-family: 'RocknRoll One', sans-serif;
+}
+
+.about{
+    position: absolute;
+    left: 80%;
+    bottom: 5%;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: bold;
+    font-family: 'RocknRoll One', sans-serif;
+    text-align: right;
 }
 
 body{
     width: 100%;
     height: 100%;
-    background:linear-gradient(rgb(76,208,248),rgb(29, 30, 116));
+    background-color: aliceblue;
 }
