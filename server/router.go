@@ -13,6 +13,7 @@ func GetRouter() *gin.Engine {
 
 	router.GET("/", controller.IndexDisplayAction)
 	router.GET("/about", controller.AboutDisplayAction)
-
+	router.GET("/login", controller.LoginDisplayAction)
+	router.GET("/registerComp", controller.RegisterCompDisplayAction)
 	return router
 }
