@@ -1,0 +1,24 @@
+.Solog{
+    font-weight: bold;
+    font-size: 60px;
+    color: aliceblue;
+    text-decoration: none;
+    font-family: 'Architects Daughter', cursive;
+}
+.siteHeader{
+    position: relative;
+    background-color:rgb(57, 162, 194);
+}
+.siteHeaderWrapper{
+    padding: 1rem 1rem;
+}
+.about{
+    position: absolute;
+    left: 80%;
+    bottom: 5%;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: bold;
+    font-family: 'RocknRoll One', sans-serif;
+    text-align: right;
+}
