@@ -15,12 +15,15 @@
 
 <body>
     {{template "header"}}
-    <form method="POST">
+    <form method="POST" action="./logined">
         <div>
-            <p>メールアドレス</p><input type="email">
+            {{.aboutEmailMessage}}
         </div>
         <div>
-            <p>パスワード</p><input type="password">
+            <p>メールアドレス</p><input name="email" type="email">
+        </div>
+        <div>
+            <p>パスワード</p><input name="password" type="password">
         </div>
         <div>
             <button type="submit">ログイン</button>
