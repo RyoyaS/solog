@@ -2,6 +2,7 @@ package db
 
 import (
 	"github.com/jinzhu/gorm"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 type User struct {
@@ -14,7 +15,7 @@ type User struct {
 }
 
 func DbInit() {
-	db, err := gorm.Open("sqlite3", "../solog.sqlite3")
+	db, err := gorm.Open("sqlite3", "solog.sqlite3")
 	if err != nil {
 		panic("データベースが開けません(dbInit)")
 	}
