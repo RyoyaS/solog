@@ -11,8 +11,12 @@
 }
 .siteHeaderWrapper{
     padding: 1rem 1rem;
+    width: 100%;
 }
-.about{
+
+ul{
+    color: #fff;
+    list-style: none;
     position: absolute;
     left: 80%;
     bottom: 5%;
@@ -21,9 +25,22 @@
     font-weight: bold;
     font-family: 'RocknRoll One', sans-serif;
     text-align: right;
-}
-
-.nav-button{
-    color: #fff;
     text-decoration: none;
 }
+li{
+    float: left;
+    margin-right: 15px;
+}
+a{
+    color: #fff;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, #fff 50%);
+    background-position: 0 0;
+    background-size: 200% auto;
+    transition: 0.5s;
+    text-decoration: none;
+}
+  
+  a:hover{
+    background-position: -100% 0;
+    color: rgb(18, 32, 47);
+  }

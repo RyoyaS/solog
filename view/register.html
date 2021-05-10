@@ -15,7 +15,28 @@
 
 <body>
     {{template "header"}}
-    Register page
 </body>
+<form method="POST" action="./registerConf">
+    <div>
+        名前:<input name="name" type="text">
+    </div>
+    <div>
+        メールアドレス:<input name="email" type="email">
+    </div>
+    <div>
+        パスワード:<input name="password" type="password">
+    </div>
+    <div>
+        性別:
+        <input name="sex" type="radio" value="1">男
+        <input name="sex" type="radio" value="2">女
+    </div>
+    <div>
+        誕生日:<input name="birthday" type="date">
+    </div>
+    <div>
+        <button type="submit">登録</button>
+    </div>
+</form>
 
 </html>
