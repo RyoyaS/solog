@@ -9,10 +9,11 @@ html {
 }
 
 .welcome .welcome-p{
+    width: 100%;
     font-weight: bold;
     font-size: 5em;
     color: rgb(18, 32, 47);
-    font-family: 'RocknRoll One', sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: absolute;
     top: 30%;
     text-align: center;

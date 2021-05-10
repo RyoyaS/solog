@@ -15,20 +15,19 @@
 }
 
 ul{
+    width: 100%;
     color: #fff;
     list-style: none;
     position: absolute;
-    left: 80%;
     bottom: 5%;
     font-size: 20px;
     color: #fff;
     font-weight: bold;
-    font-family: 'RocknRoll One', sans-serif;
+    padding-right:1em;
     text-align: right;
-    text-decoration: none;
 }
 li{
-    float: left;
+    display: inline;
     margin-right: 15px;
 }
 a{
