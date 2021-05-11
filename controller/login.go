@@ -2,7 +2,9 @@ package controller
 
 import (
 	"log"
+	"solog/db"
 
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,12 +12,28 @@ func LoginDisplayAction(c *gin.Context) {
 	c.HTML(200, "login.html", gin.H{})
 }
 
-func LoginedAction(c *gin.Context) {
+func Login(c *gin.Context, Email string) {
+	session := sessions.Default(c)
+	session.Set("Email", Email)
+	session.Save()
+}
+
+func Logout(c *gin.Context) {
+	session := sessions.Default(c)
+	session.Clear()
+	session.Save()
+}
+
+func LoginUserCheck(c *gin.Context) (bool, db.User) {
 	email, password := EmptyInputCheck(c)
 	if email != "" && password != "" {
-		//Login(email, password)
+		user := db.DbUserGetOne(email)
+		passMachResult := db.UserPassMach(user.Password, password)
+		return passMachResult, user
 	} else {
-		log.Fatal("No value Email or Password")
+		log.Println("No value Email or Password")
+		user := db.User{}
+		return false, user
 	}
 }
 
@@ -23,33 +41,5 @@ func EmptyInputCheck(c *gin.Context) (string, string) {
 	c.Request.ParseForm()
 	email := c.Request.Form["email"]
 	password := c.Request.Form["password"]
-
-	if email[0] == "" || password[0] == "" {
-		c.HTML(200, "login.html", gin.H{"aboutEmailMessage": "値が入力されていません"})
-	} else {
-		return email[0], password[0]
-	}
-	return "", ""
+	return email[0], password[0]
 }
-
-/* func Login(email, password string) {
-	var hashStr = ""
-	start := time.Now()
-	for _, user := range users {
-		if email == user.LoginId {
-			hashStr = user.Password
-			break
-		}
-	}
-	err := bcrypt.CompareHashAndPassword([]byte(hashStr), []byte(password))
-	end := time.Now()
-	fmt.Printf("%fs\t", (end.Sub(start)).Seconds())
-	if err == nil {
-		// 成功
-		fmt.Print("Success")
-	} else {
-		// 失敗
-		fmt.Print("Failure")
-	}
-	fmt.Printf("\t%s/%s\n", email, password)
-} */
