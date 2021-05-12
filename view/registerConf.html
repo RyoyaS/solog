@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/sanitize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    {{template "header"}}
+    <form method="GET" action="./registerComp">
+        <div>
+            名前:{{.name}}
+        </div>
+        <div>
+            メールアドレス:{{.email}}
+        </div>
+        <div>
+            性別:{{.sex}}
+        </div>
+        <div>
+            誕生日:{{.birthday}}
+        </div>
+        <div>
+            <button><a href="/register">戻る</a></button><button type="submit">登録</button>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../static/css/header.css">
     <link rel="stylesheet" href="../static/css/sanitize.css">
+    <link rel="stylesheet" href="../static/css/register.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,28 +16,36 @@
 
 <body>
     {{template "header"}}
+    <h1>登録情報の入力</h1>
+    <div class="content">
+        <form method="POST" action="./registerConf">
+            <div class="info">
+                <span class="required">必須</span> 名前:<input name="name" type="text">
+            </div>
+            <br>
+            <div class="info">
+                <span class="required">必須</span> メールアドレス:<input name="email" type="email">
+            </div>
+            <br>
+            <div class="info">
+                <span class="required">必須</span> パスワード:<input name="password" type="password">　　
+            </div>
+            <br>
+            <div class="info">
+                <span class="required">必須</span> 性別:
+                <input name="sex" type="radio" value="男">男
+                <input name="sex" type="radio" value="女">女　　
+            </div>
+            <br>
+            <div class="info">
+                <span class="required ">必須</span> 誕生日:<input name="birthday" type="date">　
+            </div>　
+    </div>
+    <div>
+        <button type="submit" class="submit">登録内容を確認 ></button>
+    </div>
+    </form>
+
 </body>
-<form method="POST" action="./registerConf">
-    <div>
-        名前:<input name="name" type="text">
-    </div>
-    <div>
-        メールアドレス:<input name="email" type="email">
-    </div>
-    <div>
-        パスワード:<input name="password" type="password">
-    </div>
-    <div>
-        性別:
-        <input name="sex" type="radio" value="1">男
-        <input name="sex" type="radio" value="2">女
-    </div>
-    <div>
-        誕生日:<input name="birthday" type="date">
-    </div>
-    <div>
-        <button type="submit">登録</button>
-    </div>
-</form>
 
 </html>

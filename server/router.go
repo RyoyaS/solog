@@ -28,6 +28,7 @@ func GetRouter() *gin.Engine {
 		}
 	})
 	router.GET("/register", controller.RegisterDisplayAction)
+	router.POST("/registerConf", controller.RegisterConfDisplayAction)
 	router.GET("/registerComp", controller.RegisterCompDisplayAction)
 	return router
 }
