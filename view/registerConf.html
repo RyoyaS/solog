@@ -6,32 +6,40 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../static/css/header.css">
     <link rel="stylesheet" href="../static/css/sanitize.css">
+    <link rel="stylesheet" href="../static/css/registerConf.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <title>会員登録情報確認 /Solog</title>
+
+
 </head>
 
 <body>
     {{template "header"}}
-    <form method="GET" action="./registerComp">
-        <div>
-            名前:{{.name}}
-        </div>
-        <div>
-            メールアドレス:{{.email}}
-        </div>
-        <div>
-            性別:{{.sex}}
-        </div>
-        <div>
-            誕生日:{{.birthday}}
-        </div>
-        <div>
-            <button><a href="/register">戻る</a></button><button type="submit">登録</button>
-        </div>
+    <h1>登録内容を確認</h1>
+    <div class="content">
+        <form method="GET" action="./registerComp">
+            <div class="info">
+                名前:{{.name}}
+            </div>
+            <div class="info">
+                メールアドレス:{{.email}}
+            </div>
+            <div class="info">
+                性別:{{.sex}}
+            </div>
+            <div class="info">
+                誕生日:{{.birthday}}
+            </div>
+    </div>
+    <div class="form-button">
+        <button type="button" onclick="location.href='/register'" class="back">戻る</button>
+        <button type="submit" class="submit">登録</button>
+    </div>
     </form>
+
 </body>
 
 </html>

@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+}
+.content{
+    width: 70%;
+    border:solid rgb(230, 230, 230) 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content .info{
+    padding: 20px;
+    padding-left: 30%;
+    font-size: 20px;
+}
+
+.form-button{
+    margin-left: 70%;
+}
+
+.back{
+    border-top: #fff;
+    border-left: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(2, 196, 255);
+    font-size: 2em;
+}
+
+.back:hover{
+    background-color: rgb(0, 137, 179);
+}
+
+.submit{
+    border-top: #fff;
+    border-left: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: red;
+    font-size: 2em;
+}
+
+.submit:hover{
+    background-color: rgb(182, 0, 0);
+}

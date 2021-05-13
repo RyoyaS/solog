@@ -15,6 +15,7 @@ func GetRouter() *gin.Engine {
 	router.Use(sessions.Sessions("mysession", store))
 	router.LoadHTMLGlob("view/*.html")
 	router.Static("/static", "./static")
+	router.Static("/js", "./js")
 
 	router.GET("/", controller.IndexDisplayAction)
 	router.GET("/about", controller.AboutDisplayAction)

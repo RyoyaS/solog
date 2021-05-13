@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <script src="../js/register.js"></script>
     <title>会員登録 /Solog</title>
 </head>
 
@@ -18,7 +19,7 @@
     {{template "header"}}
     <h1>登録情報の入力</h1>
     <div class="content">
-        <form method="POST" action="./registerConf">
+        <form method="POST" action="./registerConf" name="registerForm">
             <div class="info">
                 <span class="required">必須</span> 名前:<input name="name" type="text">
             </div>
@@ -33,16 +34,16 @@
             <br>
             <div class="info">
                 <span class="required">必須</span> 性別:
-                <input name="sex" type="radio" value="男">男
+                <input name="sex" type="radio" value="男" checked>男
                 <input name="sex" type="radio" value="女">女　　
             </div>
             <br>
             <div class="info">
-                <span class="required ">必須</span> 誕生日:<input name="birthday" type="date">　
+                <span class="required">必須</span> 誕生日:<input name="birthday" type="date">　
             </div>　
     </div>
     <div>
-        <button type="submit" class="submit">登録内容を確認 ></button>
+        <button type="submit" class="submit" id="submit" onclick="return formCheck()">登録内容を確認 ></button>
     </div>
     </form>
 
