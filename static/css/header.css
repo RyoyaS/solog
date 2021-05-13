@@ -30,7 +30,7 @@ li{
     display: inline;
     margin-right: 15px;
 }
-.siteHeaderWrapper a{
+.siteHeaderWrapper .nav-button a{
     color: #fff;
     background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, #fff 50%);
     background-position: 0 0;
@@ -39,7 +39,7 @@ li{
     text-decoration: none;
 }
   
-.siteHeaderWrapper a:hover{
+.siteHeaderWrapper .nav-button a:hover{
     background-position: -100% 0;
     color: rgb(18, 32, 47);
   }
